@@ -13,19 +13,7 @@ The greatness of NSS is that the system is extendable with plugins. So, the deve
 
 The sequence diagram shows the example how the user information is fetched from name services (default Linux configuration with `/etc/passwd` and `systemd`)
 
-{% plantuml %}
-App -> Glibc : getpwnam_r
-activate Glibc
-Glibc -> NSS
-activate NSS
-NSS -> NSS : Iterate over plugins
-NSS -> passwd : Request info from passwd file
-passwd -> NSS : pwd struct
-NSS -> systemd : Send request to external SystemD UserDB service
-systemd -> NSS : pwd struct
-return pwd struct
-return pwd struct
-{% endplantuml %}
+![](/public/assets/uml-sequence-diagram.svg)
 
 # Basics
 

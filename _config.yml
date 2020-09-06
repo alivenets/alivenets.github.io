@@ -31,7 +31,6 @@ markdown: kramdown
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
-  - jekyll-plantuml
 
 # Exclude from processing.
 # The following items will not be processed, by default.

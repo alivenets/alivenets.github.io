@@ -1,0 +1,15 @@
+@startuml
+
+App -> Glibc : getpwnam_r
+activate Glibc
+Glibc -> NSS
+activate NSS
+NSS -> NSS : Iterate over plugins
+NSS -> passwd : Request info from passwd file
+passwd -> NSS : pwd struct
+NSS -> systemd : Send request to external SystemD UserDB service
+systemd -> NSS : pwd struct
+return pwd struct
+return pwd struct
+
+@enduml
