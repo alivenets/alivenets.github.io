@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linux Name Service Switch - Part 1"
+title:  "Linux Name Service Switch - Part 1 - NSS 101"
 date:   2020-09-05 00:00:00 +0200
 categories: glibc linux nss nss-extension
 ---
