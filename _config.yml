@@ -22,7 +22,7 @@ title: Alexander Livenets
 email: a.livenets@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Personal site.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  alivenets
 markdown: kramdown
