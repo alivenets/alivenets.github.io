@@ -13,6 +13,8 @@ E-Mail: a.livenets [@] gmail.com
 
 Github: [alivenets](https://github.com/alivenets)
 
+linkedin: [alexander-livenets](https://www.linkedin.com/in/alexander-livenets/)
+
 ## Summary
 
 * Embedded and Automotive Software Engineer

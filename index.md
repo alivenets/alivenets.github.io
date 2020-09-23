@@ -2,14 +2,15 @@
 layout: default
 ---
 
-Welcome to my personaly site!
+Welcome to my personal site!
 
-I am embedded/automotive engineer with >10 years experience in software development. My passion is to contribute to architectural design and development 
+I am an embedded/automotive engineer with >10 years experience in software development. My passion is to contribute to architectural design and development 
 of complex embedded systems with resource constraints and untrivial solutions.
 
-Currently living in Berlin, working in (Luxoft)[https://luxoft.com]
+Currently living in Berlin, working in [Luxoft](https://luxoft.com)
 
 ## Contact information
 
 * E-mail: a.livenets [@] gmail.com
-* Github: (alivenets)[https://github.com/alivenets]
+* Github: [alivenets](https://github.com/alivenets)
+* linkedin: [alexander-livenets](https://www.linkedin.com/in/alexander-livenets/)
