@@ -1,0 +1,31 @@
+@startuml
+
+App -> Glibc : getpwnam
+activate Glibc
+Glibc -> NSS : getpwnam_r
+activate NSS
+NSS -> ExamplePlugin : getpwnam_r
+ExamplePlugin -> UserDB : GetUserByName
+UserDB --> ExamplePlugin: User Entry
+ExamplePlugin --> Glibc : passwd struct
+Glibc --> App: user info
+
+App -> Glibc : getgrouplist
+Glibc -> NSS: setgrent
+NSS -> ExamplePlugin : setgrent
+ExamplePlugin -> UserDB : ListGroups
+UserDB --> ExamplePlugin : group list
+ExamplePlugin --> Glibc: NSS status
+loop iterate until NSS_STATUS_NOTFOUND is returned
+Glibc -> NSS: getgrent_r
+NSS -> ExamplePlugin : getgrent_r
+ExamplePlugin -> UserDB : GetGroupByName
+UserDB --> ExamplePlugin : Group Entry
+ExamplePlugin --> Glibc : group struct
+end loop
+Glibc -> NSS: endgrent
+NSS -> ExamplePlugin : endgrent
+ExamplePlugin --> Glibc : NSS status
+return group info
+
+@enduml

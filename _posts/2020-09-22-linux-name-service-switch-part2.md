@@ -63,19 +63,27 @@ Let's analyze the first iteration approach to the plugin:
 * The plugin is reconfigured checking if the file is present on file system (straightforward way)
 * The plugin uses pthread mutex for entity iterator to block while iterating through groups. That behavior is required due to not-so-reentrant behavior of `getpwent_r`/`getgrent_r`
 
-As an inspiration, `nss-systemd` plugin was used: [link](https://github.com/systemd/systemd/tree/master/src/nss-systemd)
+As an inspiration, `nss-systemd` plugin was used: [link](https://github.com/systemd/systemd/tree/master/src/nss-systemd).
 The plugin implementation is available [here](ttps://github.com/alivenets/nss-plugin-example/commit/cce6aff6219a093ba6a7a63c42f6a9277494a095).
 
 The implementation provides `com_example_dynamicuser` user. This user can be conditionally added to `service-client` group if file `/tmp/enable-dynamic-group` exists.
 
-So, when running without file `/tmp/enable-dynamic-group`:
+# Testing access workflow
+
+1. Build and install NSS plugin
+2. Run `dbus-service`:
+```
+    dbus-service/dbus-service &
+```
+
+3. Call D-Bus  without file `/tmp/enable-dynamic-group`:
 ```
 sudo -u com_example_dynamicuser dbus-send --system --print-reply --dest=com.example.EchoService /com/example/EchoService com.example.EchoService.Echo string:"abc"
 ```
 
-we get `org.freedesktop.DBus.Error.AccessDenied`.
+Here, we get `org.freedesktop.DBus.Error.AccessDenied`.
 
-After creating `/tmp/enable-dynamic-group` file, we have to reload daemon cache to clean cached user supplementary groups information.
+4. Create `/tmp/enable-dynamic-group` file,  however, now, we have to reload daemon cache to clean cached user supplementary groups information.
 
 ```
 dbus-send --system --print-reply --dest=org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus.ReloadConfig
