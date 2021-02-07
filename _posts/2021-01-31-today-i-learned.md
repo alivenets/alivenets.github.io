@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "TIL"
+title:  "TIL 2021-01-31"
 date:   2021-01-31 22:00:00 +0200
-categories: til learned
+categories: til learned pytest bash glib dbus coverity cmake docker python asan libc
 ---
 
 The digest of "Today I learned" topics.
