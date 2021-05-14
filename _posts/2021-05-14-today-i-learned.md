@@ -2,7 +2,7 @@
 layout: post
 title:  "TIL 2021-05-14"
 date:   2021-05-14 16:00:00 +0200
-categories: til learned c++
+categories: til learned c++ testing logging project-management linux ltrace json
 ---
 
 The digest of "Today I learned" topics.
