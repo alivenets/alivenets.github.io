@@ -1,3 +1,24 @@
 .round-image {
   border-radius: 50%;
 }
+
+@media print {
+   .noprint {
+      visibility: hidden;
+      display: none;
+   }
+}
+
+.wrapper {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.left {
+  flex: 0 0 20%;
+  margin-right: 2em;
+}
+
+.right {
+  flex: 1;
+}
