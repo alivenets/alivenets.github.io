@@ -7,18 +7,30 @@
       visibility: hidden;
       display: none;
    }
+   .content {
+      padding-top: 0;
+      padding-bottom: 0;
+   }
 }
 
 .wrapper {
   display: flex;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+}
+
+.nomargin {
+	margin-bottom: 0.5em;
 }
 
 .left {
   flex: 0 0 20%;
-  margin-right: 2em;
+  margin-right: 1em;
 }
 
 .right {
   flex: 1;
+}
+
+ul {
+  margin-top: 1em;
 }
