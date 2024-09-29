@@ -10,6 +10,8 @@
    .content {
       padding-top: 0;
       padding-bottom: 0;
+      margin-left: 1em;
+      margin-right: 1em;
    }
 }
 
