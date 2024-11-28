@@ -4,7 +4,7 @@ layout: default
 
 Welcome to my personal site!
 
-I am an embedded/automotive engineer with >10 years experience in software development. My passion is to contribute to architectural design and development of complex embedded systems with resource constraints and untrivial solutions.
+I am an experienced embedded and automotive engineer with over 12 years in software development. I am passionate about designing and developing software for complex embedded systems with resource constraints, as well as crafting innovative solutions for challenging problems.
 
 Currently living in Berlin. Worked in [Apex.AI](https://apex.ai) and [Mbition](https://mbition.io).
 

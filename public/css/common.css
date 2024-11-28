@@ -144,3 +144,7 @@ h1, h2, h3 {
 p {
   margin-bottom: 0.5em;
 }
+
+.sidebar-about h1 {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
